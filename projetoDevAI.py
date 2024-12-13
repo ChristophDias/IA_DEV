@@ -125,7 +125,7 @@ def selecionar_ano(event):
 def buscar_servicos_bedrock(cep, modelo_veiculo):
     prompt = (f"Eu possuo um veículo do modelo {modelo_veiculo}. "
               f"Estou localizado no CEP {cep}, no Brasil. "
-              "Por favor, responda em português e liste os principais serviços automotivos disponíveis na região com endereço e telefoneo.")
+              "Por favor, responda em português e liste 10 empresas de serviços automotivos disponíveis na região com endereço e telefoneo.")
     conversation = [{"role": "user", "content": [{"text": prompt}]}]
     try:
         response = client.converse(
